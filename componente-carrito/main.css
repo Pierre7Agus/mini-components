@@ -1,0 +1,163 @@
+:root {
+  --color-svg-carrito: #125ca9;
+  --color-bg-section-inferior: #222;
+  --color-bg-section-superior: #FFF;
+  --color-text-section-inferior: #FFF;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+.minicarrito--contenedor {
+  width: 80px;
+  height: 95px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 10px 1px #858080;
+  cursor: pointer;
+}
+
+.minicarrito--seccion--superior {
+  height: 60%;
+  background-color: var(--color-bg-section-superior);
+  color: var(--color-svg-carrito);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minicarrito--seccion--inferior {
+  height: 40%;
+  background-color: var(--color-bg-section-inferior);
+  color: var(--color-text-section-inferior);
+  text-align: center;
+  line-height: 38px;
+  /*facilmente se puede usar flexbox, para centrar el texto*/
+  /*uso line-height, para no abusar de flexbox, en este caso se puede usar con seguridad line-height gracias a que el contenedor padre tiene una altura fija*/
+  border-bottom-right-radius: 10px;
+}
+
+.minicarrito--numero {
+  background-color: var(--color-svg-carrito);
+  color: var(--color-bg-section-superior);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 2;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.ape-jello {
+  -webkit-animation-name: ape-jello;
+  animation-name: ape-jello;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+@-webkit-keyframes ape-jello {
+
+  from,
+  11.1%,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg)
+  }
+
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg)
+  }
+
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg)
+  }
+
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg)
+  }
+
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg)
+  }
+
+  77.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.390625deg) skewY(0.390625deg)
+  }
+
+  88.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+  }
+}
+
+@keyframes ape-jello {
+
+  from,
+  11.1%,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg)
+  }
+
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg)
+  }
+
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg)
+  }
+
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg)
+  }
+
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg)
+  }
+
+  77.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.390625deg) skewY(0.390625deg)
+  }
+
+  88.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+  }
+}
