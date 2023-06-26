@@ -191,6 +191,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  box-shadow: 0 0 10px -1px var(--color-svg-carrito);
 }
 
 .carro-cabecera-2>span:nth-child(1) {
