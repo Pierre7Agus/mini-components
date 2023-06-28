@@ -21,6 +21,11 @@ body {
   border-bottom-right-radius: 10px;
   box-shadow: 0 0 10px 1px #858080;
   cursor: pointer;
+  transition: all 0.9s ease-out;
+}
+
+.minicarrito--contenedor.ocultar {
+  left: -200px;
 }
 
 .minicarrito--seccion--superior {
@@ -393,4 +398,38 @@ body {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0)
   }
+}
+
+/*estilos para la flecha del minicarrito*/
+.minicarrito-flecha {
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  right: -23px;
+  background: var(--color-svg-carrito);
+  width: 23px;
+  height: 48px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.minicarrito-flecha.reducir {
+  left: 200px;
+  transition: all 0.2s ease;
+}
+
+.minicarrito-flecha-inversa {
+  transition: all 0.7s ease;
+  transform: rotate(180deg);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  left: 85px;
 }

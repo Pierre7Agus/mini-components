@@ -9,6 +9,7 @@ document.addEventListener("click", (e) => {
 	}
 });
 */
+
 const $carroContenedor = document.querySelector(".carro-contenedor-1");
 document.querySelector(".carro-flecha").addEventListener("click", (e) => {
 	if (
@@ -18,17 +19,27 @@ document.querySelector(".carro-flecha").addEventListener("click", (e) => {
 		$carroContenedor.style.left = "-500px";
 		setTimeout(() => {
 			$carroContenedor.style.display = "none";
-		}, 500);
+		}, 700);
 	}
 });
 
 const $contenedorMiniCarrito = document.getElementById(
 	"minicarrito__contenedor"
 );
+const $flecha = document.querySelector(".minicarrito-flecha");
 $contenedorMiniCarrito.addEventListener("click", (e) => {
 	if (
+		e.target.matches(".minicarrito-flecha") ||
+		e.target.matches(".minicarrito-flecha *")
+	) {
+		$contenedorMiniCarrito.classList.toggle("ocultar");
+		$flecha.classList.toggle("minicarrito-flecha-inversa");
+		setTimeout(() => {
+			$flecha.classList.toggle("reducir");
+		}, 400);
+	} else if (
 		e.target.matches(".minicarrito--contenedor") ||
-		e.target.matches(".minicarrito--contenedor *")
+		e.target.matches(".minicarrito--contenedor *:not(:last-child)")
 	) {
 		$carroContenedor.style.display = "block";
 		setTimeout(() => {
